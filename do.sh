@@ -15,7 +15,7 @@ _do_autocomplete() {
     if [ $COMP_CWORD -eq 2 ]; then
         case "$prev" in
             enroll)
-                opts="client server entity_person"
+                opts="client server"
                 ;;
             revoke)
                 opts="user subca"
@@ -44,9 +44,6 @@ _do_autocomplete() {
                 opts="one-key-file-gen by-request"
                 ;;
             server)
-                opts="one-key-file-gen by-request"
-                ;;
-            entity_person)
                 opts="one-key-file-gen by-request"
                 ;;
             *)

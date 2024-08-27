@@ -6,7 +6,6 @@ cleaning_dirs=("/ca/root"
 "/db/subca"
 "/user-certs-issuing-ca" 
 "/user-certs-package/clients"
-"/user-certs-package/entity_persons"
 "/user-certs-package/servers")
 
 echo "Do you want to cleaning following directories?"

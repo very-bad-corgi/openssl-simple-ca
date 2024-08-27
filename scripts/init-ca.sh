@@ -5,8 +5,7 @@ source .env
 mkdir -p user-requests \
          user-certs-issuing-ca \
          user-certs-package/clients \
-         user-certs-package/servers \
-         user-certs-package/entity_persons
+         user-certs-package/servers
 
 ### Root CA
 #### Генерируем всегда
