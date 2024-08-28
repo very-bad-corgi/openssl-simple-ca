@@ -53,7 +53,7 @@ _do_autocomplete() {
     fi
 
     if [ $COMP_CWORD -eq 4 ]; then
-        list=$(find ./user-requests -name '*.req' -type f -exec basename {} \;)
+        list=$(find ./user-requests -name '*.req' -o -name '*.csr' -type f -exec basename {} \;)
 
         case "$prev" in
             by-request)
@@ -79,7 +79,7 @@ case "$1" in
         echo "You chose ${green}enroll${white} with subactions: ${orange}$2${white} ${orange}$3${white} ${orange}$4${white}"
         if [[ $3 == "by-request" && "$4" == "all" ]]; then
 
-            list=$(ls user-requests | grep 'req')
+            list=$(ls user-requests | grep 'req\|csr')
 
             declare failed_requests
             count_all=0 ; count_success=0
